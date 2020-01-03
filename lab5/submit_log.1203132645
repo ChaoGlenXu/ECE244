@@ -1,0 +1,14 @@
+Submitting assignment 5 from p106.ecf.utoronto.ca
+Checking for the expected files in the current directory
+Main.cpp DBentry.h DBentry.cpp TreeNode.cpp TreeNode.h TreeDB.h TreeDB.cpp
+Attempting to build your code.  Make output follows:
+==================================================================
+scl enable devtoolset-4 'g++ -std=c++0x -c Main.cpp'
+scl enable devtoolset-4 'g++ -std=c++0x -c TreeDB.cpp'
+scl enable devtoolset-4 'g++ -std=c++0x -c TreeNode.cpp'
+scl enable devtoolset-4 'g++ -std=c++0x -c DBentry.cpp'
+scl enable devtoolset-4 'g++ -std=c++0x Main.o TreeDB.o TreeNode.o DBentry.o -o db'
+------------------------------------------------------------------
+The build appears to have been successful
+
+Running exercise on the produced executable 'db'

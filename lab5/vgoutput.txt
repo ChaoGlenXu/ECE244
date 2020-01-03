@@ -1,0 +1,803 @@
+==30659== Memcheck, a memory error detector
+==30659== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==30659== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==30659== Command: /u/b/xuchao9/Desktop/ece244/lab5/dist/Debug_Valgrind/GNU-Linux/lab5
+==30659== Parent PID: 30658
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403156: TreeNode::getEntry() const (TreeNode.cpp:42)
+==30659==    by 0x402213: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47070 is 0 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403156: TreeNode::getEntry() const (TreeNode.cpp:42)
+==30659==    by 0x402224: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47070 is 0 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D258: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47020 is 0 bytes inside a block of size 16 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x4030E4: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401525: main (Main.cpp:54)
+==30659== 
+==30659== Invalid read of size 4
+==30659==    at 0x351A89D25B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f50 is 16 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D189: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D18F: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f48 is 8 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D19B: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x4A09960: memcpy (vg_replace_strmem.c:1019)
+==30659==    by 0x351A89D1E5: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f58 is 24 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 2
+==30659==    at 0x4A099B8: memcpy (vg_replace_strmem.c:1019)
+==30659==    by 0x351A89D1E5: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f60 is 32 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 2
+==30659==    at 0x4A099D0: memcpy (vg_replace_strmem.c:1019)
+==30659==    by 0x351A89D1E5: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f64 is 36 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D1E6: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x402236: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:82)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403156: TreeNode::getEntry() const (TreeNode.cpp:42)
+==30659==    by 0x402297: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47070 is 0 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403156: TreeNode::getEntry() const (TreeNode.cpp:42)
+==30659==    by 0x4022A8: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47070 is 0 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D258: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4022BA: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47020 is 0 bytes inside a block of size 16 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x4030E4: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401525: main (Main.cpp:54)
+==30659== 
+==30659== Invalid read of size 4
+==30659==    at 0x351A89D25B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4022BA: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f50 is 16 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D189: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4022BA: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D18F: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4022BA: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f48 is 8 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D19B: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4022BA: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D1E6: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4022BA: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:85)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403156: TreeNode::getEntry() const (TreeNode.cpp:42)
+==30659==    by 0x40237E: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47070 is 0 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403156: TreeNode::getEntry() const (TreeNode.cpp:42)
+==30659==    by 0x40238F: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47070 is 0 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D258: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4023A1: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47020 is 0 bytes inside a block of size 16 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x4030E4: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401525: main (Main.cpp:54)
+==30659== 
+==30659== Invalid read of size 4
+==30659==    at 0x351A89D25B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4023A1: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f50 is 16 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D189: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4023A1: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D18F: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4023A1: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f48 is 8 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D19B: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4023A1: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x351A89D1E6: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D28B: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4011BA: DBentry::getName() const (DBentry.cpp:41)
+==30659==    by 0x4023A1: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:90)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c46f40 is 0 bytes inside a block of size 39 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x351A89D4C8: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401139: DBentry::~DBentry() (DBentry.cpp:20)
+==30659==    by 0x4030DC: TreeNode::~TreeNode() (TreeNode.cpp:22)
+==30659==    by 0x402710: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403144: TreeNode::getRight() const (TreeNode.cpp:39)
+==30659==    by 0x4023ED: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:91)
+==30659==    by 0x402352: TreeDB::find_bst(std::string, TreeNode*) (TreeDB.cpp:89)
+==30659==    by 0x40217A: TreeDB::find(std::string) (TreeDB.cpp:71)
+==30659==    by 0x401997: main (Main.cpp:76)
+==30659==  Address 0x4c47080 is 16 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403132: TreeNode::getLeft() const (TreeNode.cpp:36)
+==30659==    by 0x402CCA: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:213)
+==30659==    by 0x402CF6: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CA7: operator<<(std::ostream&, TreeDB const&) (TreeDB.cpp:209)
+==30659==    by 0x401931: main (Main.cpp:73)
+==30659==  Address 0x4c47078 is 8 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403132: TreeNode::getLeft() const (TreeNode.cpp:36)
+==30659==    by 0x402CE0: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CF6: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CA7: operator<<(std::ostream&, TreeDB const&) (TreeDB.cpp:209)
+==30659==    by 0x401931: main (Main.cpp:73)
+==30659==  Address 0x4c47078 is 8 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403132: TreeNode::getLeft() const (TreeNode.cpp:36)
+==30659==    by 0x402CCA: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:213)
+==30659==    by 0x402CF6: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CF6: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CA7: operator<<(std::ostream&, TreeDB const&) (TreeDB.cpp:209)
+==30659==    by 0x401931: main (Main.cpp:73)
+==30659==  Address 0x4c47078 is 8 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Invalid read of size 8
+==30659==    at 0x403132: TreeNode::getLeft() const (TreeNode.cpp:36)
+==30659==    by 0x402CE0: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CF6: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CF6: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:214)
+==30659==    by 0x402CA7: operator<<(std::ostream&, TreeDB const&) (TreeDB.cpp:209)
+==30659==    by 0x401931: main (Main.cpp:73)
+==30659==  Address 0x4c47078 is 8 bytes inside a block of size 24 free'd
+==30659==    at 0x4A06738: operator delete(void*) (vg_replace_malloc.c:574)
+==30659==    by 0x402718: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:124)
+==30659==    by 0x402928: TreeDB::remove_bst(TreeNode*, std::string) (TreeDB.cpp:160)
+==30659==    by 0x402578: TreeDB::remove(std::string) (TreeDB.cpp:109)
+==30659==    by 0x401A43: main (Main.cpp:81)
+==30659==  Block was alloc'd at
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== Stack overflow in thread #1: can't grow stack to 0xffe601000
+==30659== 
+==30659== Process terminating with default action of signal 11 (SIGSEGV)
+==30659==  Access not within mapped region at address 0xFFE601FE8
+==30659== Stack overflow in thread #1: can't grow stack to 0xffe601000
+==30659==    at 0x402CB3: TreeDB::printAll_helper(std::ostream&, TreeNode*) const (TreeDB.cpp:212)
+==30659==  If you believe this happened as a result of a stack
+==30659==  overflow in your program's main thread (unlikely but
+==30659==  possible), you can try to increase the size of the
+==30659==  main thread stack using the --main-stacksize= flag.
+==30659==  The main thread stack size used in this run was 10485760.
+==30659== Stack overflow in thread #1: can't grow stack to 0xffe601000
+==30659== 
+==30659== Process terminating with default action of signal 11 (SIGSEGV)
+==30659==  Access not within mapped region at address 0xFFE601FC8
+==30659== Stack overflow in thread #1: can't grow stack to 0xffe601000
+==30659==    at 0x480165F: _vgnU_freeres (vg_preloaded.c:58)
+==30659==  If you believe this happened as a result of a stack
+==30659==  overflow in your program's main thread (unlikely but
+==30659==  possible), you can try to increase the size of the
+==30659==  main thread stack using the --main-stacksize= flag.
+==30659==  The main thread stack size used in this run was 10485760.
+==30659== 
+==30659== HEAP SUMMARY:
+==30659==     in use at exit: 254 bytes in 9 blocks
+==30659==   total heap usage: 115 allocs, 106 frees, 4,181 bytes allocated
+==30659== 
+==30659== 24 bytes in 1 blocks are still reachable in loss record 1 of 7
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401E7A: TreeDB::insert(DBentry*) (TreeDB.cpp:34)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== 24 bytes in 1 blocks are definitely lost in loss record 2 of 7
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401EA7: TreeDB::insert(DBentry*) (TreeDB.cpp:38)
+==30659==    by 0x401576: main (Main.cpp:55)
+==30659== 
+==30659== 32 bytes in 2 blocks are still reachable in loss record 3 of 7
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x401525: main (Main.cpp:54)
+==30659== 
+==30659== 33 bytes in 1 blocks are still reachable in loss record 4 of 7
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87BFF4: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4013AF: main (Main.cpp:44)
+==30659== 
+==30659== 33 bytes in 1 blocks are still reachable in loss record 5 of 7
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89CF6A: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89903D: std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::string const&, std::_Ios_Openmode) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4013D9: main (Main.cpp:46)
+==30659== 
+==30659== 33 bytes in 1 blocks are still reachable in loss record 6 of 7
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x4013F2: main (Main.cpp:47)
+==30659== 
+==30659== 75 bytes in 2 blocks are still reachable in loss record 7 of 7
+==30659==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==30659==    by 0x351A89C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A89D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x351A87AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==30659==    by 0x401427: main (Main.cpp:49)
+==30659== 
+==30659== LEAK SUMMARY:
+==30659==    definitely lost: 24 bytes in 1 blocks
+==30659==    indirectly lost: 0 bytes in 0 blocks
+==30659==      possibly lost: 0 bytes in 0 blocks
+==30659==    still reachable: 230 bytes in 8 blocks
+==30659==                       of which reachable via heuristic:
+==30659==                         stdstring          : 174 bytes in 5 blocks
+==30659==         suppressed: 0 bytes in 0 blocks
+==30659== 
+==30659== For counts of detected and suppressed errors, rerun with: -v
+==30659== ERROR SUMMARY: 218290 errors from 33 contexts (suppressed: 4 from 4)

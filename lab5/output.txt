@@ -1,0 +1,14 @@
+> Success
+> Success
+> Success
+> Success
+> www.amazon.com : 179333 : inactive
+www.bing.com : 191333 : active
+www.cnn.com : 283299 : active
+www.doodle.com : 283983 : active
+> Success
+> 0
+> Error: entry does not exist
+> Success
+> Error: entry does not exist
+> 

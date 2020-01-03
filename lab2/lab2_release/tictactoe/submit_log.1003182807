@@ -1,0 +1,43 @@
+Submitting assignment 2 from p98.ecf.utoronto.ca
+Checking for the expected files in the current directory
+playMove.cpp gameState.cpp
+Attempting to build your code.  Make output follows:
+==================================================================
+g++ -I . -I/share/copy/ece244f/lab2/include -I/share/copy/ece244f/SFML-2.4.2/include -Wall -Wextra -pedantic -std=c++11 -c playMove.cpp -o playMove.o
+g++ -I . -I/share/copy/ece244f/lab2/include -I/share/copy/ece244f/SFML-2.4.2/include -Wall -Wextra -pedantic -std=c++11 -c gameState.cpp -o gameState.o
+g++ playMove.o gameState.o -o tictactoe.exe -L/share/copy/ece244f/lab2/lib -lTicTacTo -L/share/copy/ece244f/SFML-2.4.2/lib -L/lib64 -lsfml-audio-s -lsfml-network-s -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -l:libudev.so.0 -lXrandr -lpthread -lrt -lGL -lSM -lICE -lX11 -lXext -lfreetype -ljpeg -l:libFLAC.so.8 -lvorbis -lvorbisenc -logg -lvorbisfile -Wall -Wextra -pedantic -std=c++11
+------------------------------------------------------------------
+The build appears to have been successful
+
+Running exercise on the produced executable 'tictactoe.exe'
+############### Testcase 1 Results ##########################
+Functionality: PASS - Output matches solution
+############### Testcase 2 Results ##########################
+Functionality: PASS - Output matches solution
+############### Testcase 3 Results ##########################
+Functionality: PASS - Output matches solution
+################# Summary for 3 test(s) #####################
+Functionality: PASS: All tests passed
+
+The required files passed exercise
+
+Submitting files
+
+Verifying submission
+submitece244f -l 2
+total 40
+-rw-r----- 1 submit ece244f 2396 Oct  3 18:28 gameState.cpp
+-rw-r----- 1 submit ece244f 3864 Oct  3 18:28 playMove.cpp
+-rw-r----- 1 submit ece244f 1748 Oct  3 17:23 submit_log.1003172206
+-rw-r----- 1 submit ece244f  445 Oct  3 17:23 submit_log.1003172318
+-rw-r----- 1 submit ece244f  445 Oct  3 17:23 submit_log.1003172330
+-rw-r----- 1 submit ece244f 2056 Oct  3 17:24 submit_log.1003172401
+-rw-r----- 1 submit ece244f 1748 Oct  3 17:29 submit_log.1003172858
+-rw-r----- 1 submit ece244f 2192 Oct  3 17:30 submit_log.1003173018
+-rw-r----- 1 submit ece244f 2260 Oct  3 17:34 submit_log.1003173407
+-rw-r----- 1 submit ece244f 2328 Oct  3 18:13 submit_log.1003181259
+
+All filesizes match. All timestamps match submission time.
+
+Submission was successful
+
